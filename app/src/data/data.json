@@ -2,61 +2,63 @@
   "columns": [
     {
       "id": "0316878b-ed27-4b14-a303-48e9f99f2d15",
-      "column1": [
+      "name": "Column 1",
+      "items": [
         {
           "id": "d0e21770-8c3d-4e84-b7d1-c4cf8b820f49",
           "text": "New intake",
-          "icon": ""
+          "image": "newIntake.png"
         },
         {
           "id": "db7edbc5-a58f-4edb-8051-26c1196d29cb",
-          "text": "New intake",
-          "icon": ""
+          "text": "Check in",
+          "image": "checkIn.png"
         },
         {
           "id": "9af7f0f1-86c1-4864-a8c1-1c4b3ed2db7c",
-          "text": "New intake",
-          "icon": ""
+          "text": "New medication",
+          "image": "newMedication.png"
         },
         {
           "id": "9dbccf11-06ad-4f90-a97d-25c9841fc1a7",
-          "text": "New intake",
-          "icon": ""
+          "text": "New incident",
+          "image": "newIncident.png"
         },
         {
           "id": "7533c118-2695-4eaa-965e-ba664ac8e2c8",
-          "text": "New intake",
-          "icon": ""
+          "text": "New progress note",
+          "image": "newProgressNote.png"
         }
       ]
     },
     {
       "id": "1fadeaf9-1b79-479b-8806-afed1a589b76",
-      "column2": [
+      "name": "Column 2",
+      "items": [
         {
           "id": "86c7053c-5991-46a8-b446-772e73df0eae",
-          "text": "New intake",
-          "icon": ""
+          "text": "Discharge",
+          "image": "discharge.png"
         },
         {
           "id": "21aa5cce-54b6-4b39-bc1a-2fb54b0089ec",
-          "text": "New intake",
-          "icon": ""
+          "text": "Check out",
+          "image": "checkOut.png"
         },
         {
           "id": "ea6120c1-da51-4083-95a8-1fe801e218a6",
-          "text": "New intake",
-          "icon": ""
+          "text": "New treatment plan",
+          "image": "newTreatmentPlan.png"
         },
         {
           "id": "8562d8da-ebea-448b-801c-30345ed4bc3a",
-          "text": "New intake",
-          "icon": ""
+          "text": "New calendar event",
+          "image": "newCalendarEvent.png"
         },
         {
           "id": "5f73692b-bbce-498f-a316-b0e706120b4b",
-          "text": "New intake",
-          "icon": ""
+          "text": "New group note",
+          "image": "newGroupNote.png"
         }
       ]
     }

@@ -1,6 +1,10 @@
 <template>
   <div class="app-container">
-    <CardList v-if="showCardList" />
+    <div class="cardlist-container">
+      <transition name="fade">
+        <CardList v-if="showCardList" />
+      </transition>
+    </div>
     <!-- FAB to open cardlist -->
     <button
       class="cardlist-fab mdc-fab"
@@ -8,7 +12,9 @@
       v-on:click="toggleMenu"
     >
       <div class="mdc-fab__ripple"></div>
-      <span class="mdc-fab__icon material-icons">add</span>
+      <span class="mdc-fab__icon material-icons">{{
+        showCardList ? "close" : "add"
+      }}</span>
     </button>
   </div>
 </template>
@@ -35,14 +41,31 @@ export default defineComponent({
 
 <style lang="scss">
 .app-container {
-  min-height: 600px;
-  min-width: 800px;
+  min-height: 388px;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardlist-container {
+  flex: 1;
 }
 
 .cardlist-fab {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
+  width: 56px;
+  height: 56px;
+  align-self: flex-end;
+  color: black;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 #app {

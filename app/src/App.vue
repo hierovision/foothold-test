@@ -8,13 +8,16 @@
     <!-- FAB to open cardlist -->
     <button
       class="cardlist-fab mdc-fab"
+      :class="{ 'cardlist-fab-active': showCardList }"
       aria-label="Expand menu"
       v-on:click="toggleMenu"
     >
       <div class="mdc-fab__ripple"></div>
-      <span class="mdc-fab__icon material-icons">{{
-        showCardList ? "close" : "add"
-      }}</span>
+      <span
+        class="mdc-fab__icon material-icons cardlist-fab-icon"
+        :class="{ 'cardlist-fab-icon-active': showCardList }"
+        >{{ showCardList ? "close" : "add" }}</span
+      >
     </button>
   </div>
 </template>
@@ -41,8 +44,8 @@ export default defineComponent({
 
 <style lang="scss">
 .app-container {
-  min-height: 388px;
-  width: 560px;
+  min-height: 537px;
+  width: 630px;
   display: flex;
   flex-direction: column;
 }
@@ -55,7 +58,23 @@ export default defineComponent({
   width: 56px;
   height: 56px;
   align-self: flex-end;
-  color: black;
+  background-color: #63e5cd;
+  transition: all 0.25s linear;
+}
+
+.cardlist-fab-active {
+  background-color: #0f2e40;
+}
+
+.mdc-fab:not(:disabled) .cardlist-fab-icon {
+  color: #0f2e40;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.mdc-fab:not(:disabled) .cardlist-fab-icon-active {
+  color: #63e5cd;
+  font-size: 32px;
 }
 
 .fade-enter-active,
